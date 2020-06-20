@@ -28,3 +28,11 @@ address {
     margin: 0px;
     color: #0F0F0F;
 }
+
+body {
+    z-index: 0;
+}
+
+.navbar-dark{
+    background-color: #512DA8;
+}
