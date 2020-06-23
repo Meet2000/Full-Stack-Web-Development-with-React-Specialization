@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal" href=""><span class="fa fa-sign-in"></span> Login</a>
+                    <a id="loginButton" href="#"><span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
@@ -157,7 +157,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#reserve-table-card" role="button" class="btn btn-warning btn-block nav-link">Reserve Table</a>
+                    <a id="reserveTableButton" role="button" class="btn btn-warning btn-block nav-link">Reserve Table</a>
+                    <!-- comment : tooltip button -->
                     <!-- <a role="button" class="btn btn-warning btn-block nav-link" data-toggle="tooltip" data-html="true" title="Or call us as <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserve-table-card">Reserve Table</a> -->
                 </div>
             </div>
@@ -257,63 +258,6 @@
             </div>
         </div>
 
-        <!-- <div class="row row-content align-items-center" id="reserve-table-card">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <div class="card">
-                    <h2 class="card-header bg-warning text-white">Reserve a Table</h2>
-                    <div class="card-block card-body">
-                        <form>
-                            <div class="form-group row">
-                                <div class="col-12 col-sm-2">
-                                    Number of Guests
-                                </div>
-                                <div class="col-12 col-sm-10">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r1" id="r1" value="">
-                                        <label class="form-check-label" for="r1">1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r2" id="r2" value="">
-                                        <label class="form-check-label" for="r2">2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r3" id="r3" value="">
-                                        <label class="form-check-label" for="r3">3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r4" id="r4" value="">
-                                        <label class="form-check-label" for="r4">4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r5" id="r5" value="">
-                                        <label class="form-check-label" for="r5">5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r6" id="r6" value="">
-                                        <label class="form-check-label" for="r6">6</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-12 col-sm-2">Date and Time</div>
-                                <div class="col-12 col-sm-4">
-                                    <input class="form-control" type="text" name="date" id="date" placeholder="Date">
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <input class="form-control" type="text" name="time" id="time" placeholder="Time">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-12 col-sm-10 offset-sm-2">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
     </div>
 
     <footer class="footer">
@@ -362,27 +306,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#mycarousel').carousel( {interval: 2000} );
-            $('#carouselButton').click(function() {
-                if ($('#carouselButton').children('span').hasClass('fa-pause')) {
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-                } else if ($('#carouselButton').children('span').hasClass('fa-play')) {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');
-                }
-            });
-        });
-    </script>
-    <!-- <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        })
-    </script> -->
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
