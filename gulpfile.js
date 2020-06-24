@@ -61,17 +61,17 @@ gulp.task('usemin', function() {
     return gulp.src('./*.html')
     .pipe(flatmap(function(stream, file){
         return stream
-          .pipe(usemin({
-              css: [ rev() ],
-              html: [ function() { return htmlmin({ collapseWhitespace: true })} ],
-              js: [ uglify(), rev() ],
-              inlinejs: [ uglify() ],
-              inlinecss: [ cleanCss(), 'concat' ]
-          }))
-      }))
-      .pipe(gulp.dest('dist/'));
-  });
+        .pipe(usemin({
+            css: [ rev() ],
+            html: [ function() { return htmlmin({ collapseWhitespace: true })} ],
+            js: [ uglify(), rev() ],
+            inlinejs: [ uglify() ],
+            inlinecss: [ cleanCss(), 'concat' ]
+        }))
+    }))
+    .pipe(gulp.dest('dist/'));
+});
   
-  gulp.task('build',['clean'], function() {
-      gulp.start('copyfonts','imagemin','usemin');
-  });
+gulp.task('build',['clean'], function() {
+    gulp.start('copyfonts','imagemin','usemin');
+});
